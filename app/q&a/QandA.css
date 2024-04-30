@@ -1,0 +1,15 @@
+.qandA{
+    margin-left: 10px;
+    margin-right: 300px;
+}
+
+
+@media screen and (max-width:940px) {
+
+    .qandA{
+        margin-left: 10px;
+        margin-right: 30px;
+    }
+
+
+}

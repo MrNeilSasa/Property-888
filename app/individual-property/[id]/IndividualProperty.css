@@ -1,0 +1,69 @@
+.slider {
+  background-color: var(--cultured-2);
+}
+
+.mycard {
+  width: 70%;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 25%;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card p {
+  font-size: 20px;
+}
+
+.info {
+  display: flex;
+  margin: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .mycard {
+    width: 100%;
+  }
+
+  .mycard h1 {
+    font-size: 17px;
+  }
+
+  .mycard p {
+    font-size: 15px;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: none;
+    margin-top: 20px;
+    order: 2;
+    /* Change the order to move contact-card below mycard */
+  }
+
+  .contact-card p {
+    font-size: 15px;
+  }
+
+  .contact-card h1 {
+    font-size: 17px;
+  }
+}

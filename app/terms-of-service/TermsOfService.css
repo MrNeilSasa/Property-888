@@ -1,0 +1,11 @@
+body {
+    margin: 5px;
+}
+
+.terms {
+    margin-left: 15px;
+}
+
+.terms-list {
+    list-style-type: decimal;
+}

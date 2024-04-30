@@ -1,0 +1,83 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.listing-section {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.listing-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  max-width: 450px;
+  background-color: white;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+}
+
+.listing-image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.listing-image {
+  max-width: 100%;
+  min-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.listing-image:hover {
+  transform: scale(1.1);
+}
+
+.listing-details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.listing-description {
+  font-size: 20px;
+  margin-bottom: 8px;
+  height: 75px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #3498db;
+  width: 24px;
+  height: 24px;
+}
+
+.price {
+  font-size: 19px;
+  color: green;
+  font-weight: bold;
+}
+
+@media (max-width: 1500px) {
+  .listing-card {
+    width: 350px;
+    margin: 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .listing-card {
+    width: 400px;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,50 @@
+h1 {
+  color: black;
+}
+
+p {
+  color: black;
+  font-size: large;
+}
+
+.content-description {
+  width: 50%;
+  align-self: center;
+}
+
+.content-description p.small-text {
+  font-size: small;
+}
+
+.haas {
+  background-color: white;
+  color: #fff;
+  height: 7auto;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.haas:before {
+  content: "";
+  background: rgb(241, 234, 234);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.haas .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 940px) {
+}
