@@ -1,6 +1,21 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Running the Application
+
+Supply the following keys in your `.env` variable:
+
+```sh
+NEXT_PUBLIC_RPC_URL=http://127.0.0.1:8545
+AUTH_SECRET=somereallysecretsecret
+
+
+INFURA_API_KEY=<YOUR_INFURA_API_KEY>
+SEPOLIA_PRIVATE_KEY=<Wallet_Private_Key>
+NEXT_PUBLIC_CLIENT_ID=<ThridWeb_ClientID>
+```
+
+`Wallet_Private_Key`: [Get Key Here](https://app.infura.io/)
+`ThridWeb_ClientID`: [Get ClientID Here](https://thirdweb.com/dashboard/settings/api-keys)
 
 First, run the development server:
 

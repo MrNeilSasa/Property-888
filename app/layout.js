@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { SessionProvider } from "next-auth/react";
+import { ThirdwebProvider } from "@/app/thirdweb";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <SessionProvider>
         <body>
-          <Navbar />
-          {children}
-          <Footer />
+          <ThirdwebProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThirdwebProvider>
         </body>
       </SessionProvider>
     </html>

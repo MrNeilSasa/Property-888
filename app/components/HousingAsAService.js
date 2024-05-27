@@ -32,17 +32,14 @@ const HousingAsAService = async () => {
           <h1 style={{ color: "black" }}>Housing as a Service (HaaS)</h1>
           <div className="content-description">
             <p>
-              <p>
-                HaaS stands for “Home ownership as a Service”, where three
-                industries are combined as follows: <br />
-                Home ownership as a Service (HaaS) + Solar Power as a Service
-                (SPaaS) + Electric Vehicle as a Service (EVaaS), are combined to
-                make affordable homes, along with mass adoption of electric
-                vehicles (EVs), while allowing the consumer the ability enjoy
-                monthly savings when compared to renting, which perfect for a
-                economic nuclear family, young professionals, and taxi
-                operators.
-              </p>
+              HaaS stands for “Home ownership as a Service”, where three
+              industries are combined as follows: <br />
+              Home ownership as a Service (HaaS) + Solar Power as a Service
+              (SPaaS) + Electric Vehicle as a Service (EVaaS), are combined to
+              make affordable homes, along with mass adoption of electric
+              vehicles (EVs), while allowing the consumer the ability enjoy
+              monthly savings when compared to renting, which perfect for a
+              economic nuclear family, young professionals, and taxi operators.
             </p>
           </div>
 
