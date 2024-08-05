@@ -11,11 +11,10 @@ AUTH_SECRET=somereallysecretsecret
 
 INFURA_API_KEY=<YOUR_INFURA_API_KEY>
 SEPOLIA_PRIVATE_KEY=<Wallet_Private_Key>
-NEXT_PUBLIC_CLIENT_ID=<ThridWeb_ClientID>
+
 ```
 
 `Wallet_Private_Key`: [Get Key Here](https://app.infura.io/)
-`ThridWeb_ClientID`: [Get ClientID Here](https://thirdweb.com/dashboard/settings/api-keys)
 
 First, run the development server:
 

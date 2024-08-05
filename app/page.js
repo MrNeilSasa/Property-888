@@ -7,14 +7,18 @@ import NewDevelopment from "./components/NewDevelopment";
 import Rent2Own from "./components/Rent2Own";
 import PropertyNFT from "./components/PropertyNFT";
 import SecuritiesToken from "./components/SecuritiesToken";
+import Hotels from "./components/Hotels";
+import Values from "./components/Values";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <Values />
       <HousingAsAService />
       <AffordableHousing />
       <Rent2Own />
+      <Hotels />
       <NewDevelopment />
       <Buy />
       <GoldTokenization />

@@ -3,12 +3,13 @@ import React, { useState, Fragment } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/images/logo.jpg";
+import logo from "../../public/images/logo.png";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import "./Navbar.css";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { redirect } from "next/navigation";
+import Login from "./Login";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -244,15 +245,12 @@ const Navbar = () => {
               </Link>
             )}
           </li>
+
+          <li className="nav-item-button">
+            <Login />
+          </li>
         </ul>
       </nav>
-      {/*
-        {showLoginModal && ( // Render Login only if showLoginModal is true
-            <Login
-                showLoginModal={showLoginModal} // Pass showLoginModal as a prop
-                closeModal={closeLoginModal}
-            />
-        )} */}
     </div>
   );
 };

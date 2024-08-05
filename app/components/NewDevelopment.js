@@ -31,7 +31,7 @@ const NewDevelopment = async () => {
     return (
       <div className="new" id="new">
         <div className="content">
-          <h1 style={{ color: "black" }}>New Development</h1>
+          <h1 style={{ color: "black" }}>New Development/Loans</h1>
           <div className="content-description">
             <p>
               Submit your property to Property 888 for maximum economic
@@ -43,11 +43,18 @@ const NewDevelopment = async () => {
           </div>
 
           {session?.user?.role === "admin" && (
-            <Link href="/submit-property/new">
-              <button className="submit-button" style={{ width: "150px" }}>
-                Submit Property
-              </button>
-            </Link>
+            <div>
+              <Link href="/submit-property/new">
+                <button className="submit-button" style={{ width: "150px" }}>
+                  Submit Property
+                </button>
+              </Link>
+              <Link href="/newDevelopment-nft">
+                <button className="submit-button" style={{ width: "150px" }}>
+                  Upload Contract
+                </button>
+              </Link>
+            </div>
           )}
 
           <div className="listing-section">
