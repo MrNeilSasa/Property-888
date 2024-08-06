@@ -13,12 +13,6 @@ const bufferToStream = (buffer) => {
   });
 };
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 const saveFile = async (file) => {
   console.log("File: ", file);
   try {
