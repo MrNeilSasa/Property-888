@@ -18,12 +18,12 @@ const ImageSlider = ({ id }) => {
     const fetchImages = async () => {
       try {
         console.log("Getting images for: ", id);
-        /*const response = await axios.get(
-          `https://property888.onrender.com:443/api/imageslider/${id}`
-        );*/
         const response = await axios.get(
-          `http://localhost:3000/api/imageslider/${id}`
+          `https://property-888.vercel.app/api/imageslider/${id}`
         );
+        // const response = await axios.get(
+        //   `http://localhost:3000/api/imageslider/${id}`
+        // );
         setImages([response.data.slideshow]);
         console.log("Images: ", response.data.slideshow);
       } catch (error) {
