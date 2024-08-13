@@ -1,0 +1,31 @@
+.container {
+  display: flex; /* Enable flexbox layout */
+}
+
+.left,
+.right {
+  flex: 1; /* Make each div take up half the available space */
+  padding: 20px; /* Add some padding for visual separation */
+  height: 100%;
+}
+
+.left {
+  text-align: center; /* Center text content in the left div */
+}
+
+.centered-text {
+  line-height: 1.5; /* Adjust line spacing for better readability */
+  font-size: xx-large;
+}
+
+.right {
+  position: relative; /* Make the iframe fixed within the right div */
+  margin-left: 100px;
+}
+
+iframe {
+  margin: 0 auto;
+  display: flex; /* Enable flexbox layout */
+  justify-content: center;
+  margin-bottom: 50px;
+}
