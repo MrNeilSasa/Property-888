@@ -8,14 +8,14 @@ const IndividualProperty = async ({ params }) => {
     // Get the property ID from the URL parameters
 
     console.log("ID: ", params.id);
-    /*
-  const response = await axios.get(
-    `https://property888.onrender.com:443/api/properties/${id}`
-  );*/
 
     const response = await axios.get(
-      `http://localhost:3000/api/properties/${params.id}`
+      `https://property-888.vercel.app/api/properties/${id}`
     );
+
+    // const response = await axios.get(
+    //   `http://localhost:3000/api/properties/${params.id}`
+    // );
 
     const property = response.data.property;
 
