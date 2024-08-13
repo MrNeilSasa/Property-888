@@ -9,6 +9,7 @@ import PropertyNFT from "./components/PropertyNFT";
 import SecuritiesToken from "./components/SecuritiesToken";
 import Hotels from "./components/Hotels";
 import Values from "./components/Values";
+import TechnologyProviders from "./components/TechnologyProviders";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <GoldTokenization />
       <PropertyNFT />
       <SecuritiesToken />
+      <TechnologyProviders />
     </main>
   );
 }

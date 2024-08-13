@@ -70,8 +70,10 @@ const SubmitHotelView = () => {
         console.log("Hotel Image ", [...formDataMain.entries()]);
       }
       console.log("FORM DATA: ", formDataMain.images);
+
       const response = axios.post(
-        "http://localhost:3000/api/uploadHotel",
+        "https://property-888.vercel.app/api/uploadHotel",
+        //"http://localhost:3000/api/uploadHotel",
         formDataMain
       );
 
