@@ -10,7 +10,7 @@ const IndividualProperty = async ({ params }) => {
     console.log("ID: ", params.id);
 
     const response = await axios.get(
-      `https://property-888.vercel.app/api/properties/${id}`
+      `https://property-888.vercel.app/api/properties/${params.id}`
     );
 
     // const response = await axios.get(
