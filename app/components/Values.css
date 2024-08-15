@@ -1,3 +1,7 @@
+.values {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
 .values-container {
   display: flex;
   flex-direction: row;
@@ -24,4 +28,16 @@ h3 {
 
 .value {
   padding: 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+
+@media (max-width: 1400px) {
+  h3 {
+    font-size: 20px;
+  }
+  h2 {
+  }
 }

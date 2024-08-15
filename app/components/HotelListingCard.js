@@ -8,7 +8,7 @@ const HotelListingCard = async ({ hotelid, image, title, price, url }) => {
   console.log("Image: ", imageSrc);
   return (
     <div className="hotel-listing-card">
-      <Link href={url}>
+      <Link href={url} target="_blank">
         <Image
           className="hotel-image"
           src={imageSrc}

@@ -61,7 +61,7 @@ const Rent2Own = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$ ${formatPrice(
+                  price={`US$C ${formatPrice(
                     listing.price
                   )} per month / JM$C ${formatPrice(listing.price)} per month`}
                 />

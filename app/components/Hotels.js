@@ -37,9 +37,11 @@ const Hotels = async () => {
             </div>
             <p>
               Property 888 buys selected hotels, partners with TravelnCrypto for
-              bookings, and subletting of initial bookings in US$C, & mUS$C, at
-              lower cost, with greater efficiency of occupancy, based on
-              Cryptoeconomics 3.0.
+              bookings, with wholesale discount bookings in mUS$C, with
+              subletting of initial bookings, with max mark-up of 44%, leading
+              to greater efficiency of occupancy, based on Cryptoeconomics 3.0 &
+              Tokenomics 3.0, with all loans issued in USDT, and paid back in
+              US$C
             </p>
           </div>
 
@@ -60,7 +62,7 @@ const Hotels = async () => {
                   hotelid={hotel.hotelid}
                   image={hotel.filename}
                   title={hotel.title}
-                  price={`US$ ${formatPrice(hotel.price)}`}
+                  price={`US$C ${formatPrice(hotel.price)}`}
                   url={hotel.url}
                 />
               </div>

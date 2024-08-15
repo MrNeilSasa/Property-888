@@ -33,7 +33,7 @@ const SecuritiesToken = async () => {
 
     const convertPrice = (usdPrice) => {
       const iSPACPrice = usdPrice / 100;
-      return `US$ ${formatPrice(usdPrice)} / iSPAC ${formatPrice(iSPACPrice)}`;
+      return `US$C ${formatPrice(usdPrice)} / iSPAC ${formatPrice(iSPACPrice)}`;
     };
 
     return (
