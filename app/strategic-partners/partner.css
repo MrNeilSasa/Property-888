@@ -1,0 +1,72 @@
+.container {
+  text-align: center;
+}
+
+.lawyers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: nowrap;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  min-height: 500px;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text within the card */
+  height: fit-content;
+}
+
+.partner-image {
+  width: 250px; /* Adjust image width as needed */
+  height: auto;
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 10px;
+  border: 3px solid black;
+}
+
+.developers {
+  height: 50vh;
+}
+
+.contractors {
+  height: 50vh;
+}
+
+.architects {
+  height: 50vh;
+}
+
+.payments {
+  height: 50vh;
+}
+
+.trueSPAClogo {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+}

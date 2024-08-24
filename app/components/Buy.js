@@ -34,7 +34,7 @@ const Buy = async () => {
     return (
       <div className="buy" id="buy">
         <div className="content">
-          <h1 style={{ color: "black" }}>Buy</h1>
+          <h1 style={{ color: "black" }}>Buy <span className="coming-soon">(Coming Soon)</span></h1>
           <div className="content-description">
             <p>
               Purchase real estate using selected Cryptocurrencies, maximize

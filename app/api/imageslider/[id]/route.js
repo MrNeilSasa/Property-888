@@ -1,20 +1,22 @@
-import pool from "@/lib/db";
+import pool from '@/lib/db'
 
 export async function GET(request, { params }) {
   try {
-    const id = params.id;
-    const client = await pool.connect();
+    const id = params.id
+    const idString = id.toString()
 
-    const result = await client.query(
-      "SELECT * FROM imageslider WHERE property_id = $1",
-      [id]
-    );
+    const client = await pool.connect()
 
-    const slideshow = result.rows[0];
+    const result = await client.query('SELECT * FROM imageslider WHERE property_id = $1', [
+      idString,
+    ])
 
-    return Response.json({ slideshow });
+    const slideshow = result.rows
+
+
+    return Response.json({ slideshow })
   } catch (error) {
-    console.error("Error fetching property images:", error);
-    return Response("Internal server error", { status: 500 });
+    console.error('Error fetching property images:', error)
+    return Response('Internal server error', { status: 500 })
   }
 }

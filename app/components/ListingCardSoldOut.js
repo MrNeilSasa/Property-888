@@ -40,7 +40,7 @@ const ListingCardSoldOut = ({
               <Image src={bedroom} width={24} height={24} alt="bedroom icon" />
             </div>
 
-            <div>{`${bedrooms} Bedrooms`}</div>
+            <div>{`${bedrooms} Bedroom`}</div>
           </div>
           <div className="icon-container">
             <div className="icon">
@@ -52,7 +52,7 @@ const ListingCardSoldOut = ({
               />
             </div>
 
-            <div>{`${bathrooms} Bathrooms`}</div>
+            <div>{`${bathrooms} Bathroom`}</div>
           </div>
           <div className="icon-container">
             <div className="icon">

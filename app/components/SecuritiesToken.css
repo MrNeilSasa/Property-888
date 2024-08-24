@@ -17,7 +17,7 @@ p {
 }
 
 .securities:before {
-  content: "";
+  content: '';
   background: rgb(241, 234, 234);
   height: 100%;
   width: 100%;
@@ -35,4 +35,14 @@ p {
 
   margin: auto;
   padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .content-description p {
+    font-size: 16px;
+  }
 }

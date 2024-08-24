@@ -34,7 +34,9 @@ const PropertyNFT = async () => {
     return (
       <div className="propertynft" id="propertynft">
         <div className="content">
-          <h1 style={{ color: "black" }}>Property NFT (Coming Soon)</h1>
+          <h1 style={{ color: "black" }}>
+            Property NFT <span className="coming-soon">(Coming Soon)</span>
+          </h1>
           <div className="content-description">
             <p>
               Convert your property value & title into that of an NFT, with all

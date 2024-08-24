@@ -6,6 +6,7 @@ import polymathlogo from "/public/images/polymath-poly-logo-82102E2869-seeklogo.
 import dodologo from "/public/images/dodo_new_igslbh.jpg";
 import chainlinklogo from "/public/images/Chainlink-Logo-Blue.png";
 import morphoBluelogo from "/public/images/MorphoBlueLogo.png";
+import alchemyPaylogo from "/public/images/Alchemy Pay Logo.png";
 import Image from "next/image";
 import "./TechnologyProviders.css";
 
@@ -42,8 +43,8 @@ const TechnologyProviders = () => {
           src={polygonLogo}
           alt="Polygon"
           style={{
-            height: "91px",
-            width: "274px",
+            height: "110px",
+            width: "315.56px",
             marginTop: "40px",
             marginBottom: "40px",
             marginLeft: "15px",
@@ -66,8 +67,8 @@ const TechnologyProviders = () => {
           src={dodologo}
           alt="DODO"
           style={{
-            height: "137px",
-            width: "333px",
+            height: "107px",
+            width: "275px",
             marginTop: "40px",
             marginBottom: "40px",
             marginLeft: "30px",
@@ -78,8 +79,8 @@ const TechnologyProviders = () => {
           src={chainlinklogo}
           alt="ChainLink"
           style={{
-            height: "100px",
-            width: "406px",
+            height: "76.14px",
+            width: "300px",
             marginTop: "40px",
             marginBottom: "40px",
             marginLeft: "15px",
@@ -90,14 +91,28 @@ const TechnologyProviders = () => {
           src={morphoBluelogo}
           alt="Morpho Blue"
           style={{
-            height: "85px",
-            width: "425.6px",
+            height: "69.9px",
+            width: "350px",
             marginTop: "40px",
             marginBottom: "40px",
             marginLeft: "15px",
             marginRight: "15px",
           }}
         />
+
+        <Image
+          src={alchemyPaylogo}
+          alt="Morpho Blue"
+          style={{
+            height: "167px",
+            width: "199px",
+            marginTop: "40px",
+            marginBottom: "40px",
+            marginLeft: "15px",
+            marginRight: "15px",
+          }}
+        />
+
       </div>
     </div>
   );

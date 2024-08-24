@@ -40,7 +40,7 @@ const AffordableHousing = async () => {
               Artificial Intelligence designed 750 sq ft & 950 sq ft affordable
               homes,
               <br />
-              30% to 50% cheaper, using listed Cryptocurrencies.
+              30% to 50% cheaper.
             </p>
           </div>
 

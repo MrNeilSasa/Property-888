@@ -1,7 +1,9 @@
 import { chain, client } from "@/utils/constants";
 import React from "react";
-import { ConnectButton } from "thirdweb/react";
+import { ConnectButton, darkTheme } from "thirdweb/react";
 import { createWallet, walletConnect } from "thirdweb/wallets";
+
+
 
 const projectId = process.env.PROJECT_ID;
 
@@ -21,6 +23,9 @@ const Login = () => {
         client={client}
         chain={chain}
         wallets={wallets}
+        theme={darkTheme({
+          colors: { primaryButtonBg: "#7a33ff", primaryButtonText: "#ffffff" },
+        })}
         connectModal={{ size: "compact" }}
         walletConnect={{ projectId: projectId }}
       />

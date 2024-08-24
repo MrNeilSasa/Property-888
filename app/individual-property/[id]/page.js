@@ -1,6 +1,8 @@
 import axios from "axios";
 import ImageSlider from "../../components/ImageSlider";
 import Link from "next/link";
+import Image from "next/image";
+import telegramIcon from "/public/images/telegram-icon-6896828_1280.png";
 import "./IndividualProperty.css";
 
 const IndividualProperty = async ({ params }) => {
@@ -72,12 +74,16 @@ const IndividualProperty = async ({ params }) => {
           <div className="contact-card">
             <h1>Contact Information</h1>
             <br />
+            <Link href="https://t.me/Property_888 " target="_blank" className="telegramLink">
+            <Image src={telegramIcon} alt="telegram" style={{height: "30px", width: "30px"}}/>
+            <span className="link-text">P888 Telegram Group</span>
+            </Link>
+            
             <p>Email: info@property888.xyz</p>
             <p>Phone Number: 1 (876) 207-5897</p>
           </div>
         </div>
 
-        {/* Render other property details as needed */}
       </div>
     );
   } catch (error) {

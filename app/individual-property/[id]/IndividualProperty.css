@@ -34,6 +34,21 @@
   margin: 50px;
 }
 
+.telegramLink{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+
+.link-text{
+  align-self: center;
+  color: black;
+  font-size: 20px;
+
+}
+
 @media screen and (max-width: 1000px) {
   .info {
     flex-direction: column;
@@ -46,6 +61,7 @@
   .mycard h1 {
     font-size: 17px;
   }
+
 
   .mycard p {
     font-size: 15px;
@@ -60,6 +76,10 @@
   }
 
   .contact-card p {
+    font-size: 15px;
+  }
+
+  .link-text {
     font-size: 15px;
   }
 

@@ -8,15 +8,31 @@ h1 {
   min-height: 75vh;
   display: flex;
   justify-content: center;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.advisor-section {
+  display: flex;
+  width: 30%;
+  text-align: center;
   flex-direction: column;
 }
 
 .team-members {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-self: center;
   justify-content: space-evenly;
   width: 65%;
+  text-align: center;
   min-height: 500px;
 }
 
@@ -24,9 +40,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-self: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  width: 50%;
+
+  width: 65%;
   justify-content: center;
   min-height: 500px;
 }
@@ -36,6 +51,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 370px;
   margin: 10px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -53,7 +69,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 22px;
   font-weight: 500;
 }
 
@@ -62,6 +78,18 @@ p {
 }
 
 @media (max-width: 948px) {
+  .team-page {
+    flex-direction: column;
+  }
+
+  .team-section {
+    width: 100%;
+  }
+
+  .advisor-section {
+    width: 100%;
+  }
+
   /* Adjust layout for smaller screens */
   .team-members {
     flex-direction: column; /* Stack cards vertically */
@@ -71,6 +99,5 @@ p {
   .advisors {
     flex-direction: column; /* Stack cards vertically */
     gap: 20px;
-    width: 100%;
   }
 }

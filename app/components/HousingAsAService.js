@@ -1,103 +1,93 @@
-import React from "react";
-import { auth } from "@/auth";
-import Link from "next/link";
-import ListingCard from "./ListingCard";
-import ListingCardSoldOut from "./ListingCardSoldOut";
-import axios from "axios";
-import "./HousingAsAService.css";
+import React from 'react'
+import { auth } from '@/auth'
+import Link from 'next/link'
+import ListingCard from './ListingCard'
+import ListingCardSoldOut from './ListingCardSoldOut'
+import axios from 'axios'
+import './HousingAsAService.css'
 
 const HousingAsAService = async () => {
-  const session = await auth();
+  const session = await auth()
   try {
-    const res = await axios.get(
-      "https://property-888.vercel.app/api/properties",
-      {
-        //const res = await axios.get("http://localhost:3000/api/properties", {
-        params: { section: "haas" },
-      }
-    );
+    const res = await axios.get('https://property-888.vercel.app/api/properties', {
+      //const res = await axios.get('http://localhost:3000/api/properties', {
+      params: { section: 'haas' },
+    })
 
-    const availableListings = res.data.availableProperties;
-    const soldListings = res.data.soldProperties;
+    const availableListings = res.data.availableProperties
+    const soldListings = res.data.soldProperties
 
     const formatPrice = (price) => {
       // Function to format the price with commas (optional)
-      return new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD", // Adjust the currency code if needed
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD', // Adjust the currency code if needed
       })
         .format(price)
-        .replace(/^\$/, "");
-    };
+        .replace(/^\$/, '')
+    }
 
     return (
       <div className="haas" id="haas">
         <div className="content">
-          <h1 style={{ color: "black" }}>Housing as a Service (HaaS)</h1>
+          <h1 style={{ color: 'black' }}>Housing as a Service (HaaS)</h1>
           <div className="content-description">
-            <p>
-              HaaS stands for “Home ownership as a Service”, where three
-              industries are combined as follows: <br />
-              Home ownership as a Service (HaaS) + Solar Power as a Service
-              (SPaaS) + Electric Vehicle as a Service (EVaaS), are combined to
-              make affordable homes, along with mass adoption of electric
-              vehicles (EVs), while allowing the consumer the ability enjoy
-              monthly savings when compared to renting, which perfect for a
-              economic nuclear family, young professionals, and taxi operators.
+            <p className="normal-screens">
+              HaaS stands for “Home ownership as a Service”, where three industries are combined as
+              follows: <br />
+              Home ownership as a Service (HaaS) + Solar Power as a Service (SPaaS) + Electric
+              Vehicle as a Service (EVaaS), are combined to make affordable homes, along with mass
+              adoption of electric vehicles (EVs), while allowing the consumer the ability enjoy
+              monthly savings when compared to renting, which perfect for a economic nuclear family,
+              young professionals.
+            </p>
+            <p className="moblie-screens">
+              Home ownership as a Service (HaaS) + Solar Power as a Service (SPaaS) + Electric
+              Vehicle as a Service (EVaaS) provides superior monthly savings, perfect for the
+              nuclear family, young professionals, and taxi operators. X-Factor: Includes bitcoin
+              mining, with partial proceeds to lower home ownership.
             </p>
           </div>
 
-          {session?.user?.role === "admin" && (
+          {session?.user?.role === 'admin' && (
             <Link href="/submit-property/haas">
-              <button className="submit-button" style={{ width: "150px" }}>
+              <button className="submit-button" style={{ width: '150px' }}>
                 Submit Property
               </button>
             </Link>
           )}
 
           <div className="listing-section">
-            {availableListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCard
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={`US$C ${formatPrice(
-                    listing.price
-                  )} per month / JM$C ${formatPrice(
-                    listing.price
-                  )} per month (950 sqft + PV Solar + EV)`}
-                />
-              </div>
-            ))}
+            {availableListings.map((listing) => {
+              let formattedPrice
+              console.log('Listing price for Hass:', listing.price)
+              if (listing.price === '800.00') {
+                formattedPrice = `US$108,000 / US$800 / JM$C 800 per month (Free: PV Solar + New Compact EV Car or New Mini SUV EV)`
+              } else if (listing.price === '1066.00') {
+                formattedPrice = `US$142,000,000 / US$1,066 / JM$C 1,066 per month (Free: PV Solar + New EV SUV)`
+              }
 
-            {soldListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCardSoldOut
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={`US$ ${formatPrice(
-                    listing.price
-                  )} per month / JM$C ${formatPrice(
-                    listing.price
-                  )} per month (950 sqft + PV Solar + EV)`}
-                />
-              </div>
-            ))}
+              return (
+                <div key={listing.id} className="listing-card-style">
+                  <ListingCard
+                    id={listing.id}
+                    mainimage={listing.mainimage}
+                    title={listing.title}
+                    bedrooms={listing.bedrooms}
+                    bathrooms={listing.bathrooms}
+                    sqft={listing.sqft}
+                    price={formattedPrice}
+                  />
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
-    );
+    )
   } catch (error) {
-    console.error("Error fetching listings: ", error);
+    console.error('Error fetching listings: ', error)
   }
-};
+}
 
-export default HousingAsAService;
+export default HousingAsAService

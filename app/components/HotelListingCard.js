@@ -17,12 +17,18 @@ const HotelListingCard = async ({ hotelid, image, title, price, url }) => {
           position="relative"
           alt={"Hotel"}
         />
-
-        <div className="hotel-details">
-          <div className="hotel-title">{title}</div>
-          <div className="hotel-price">{price}</div>
-        </div>
       </Link>
+      <div className="hotel-details">
+        <div className="hotel-title">{title}</div>
+        <div className="split-card">
+          <div className="hotel-price">{price}</div>
+          <div>
+            <Link href="/add-liquidity">
+              <button className="small-liquidity-button">Add Liquidity</button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

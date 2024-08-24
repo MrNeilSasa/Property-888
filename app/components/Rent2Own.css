@@ -26,7 +26,7 @@ p {
 }
 
 .rent2own:before {
-  content: "";
+  content: '';
   background: rgb(241, 234, 234);
   height: 100%;
   width: 100%;
@@ -46,5 +46,20 @@ p {
   padding: 1rem;
 }
 
-@media screen and (max-width: 940px) {
+.coming-soon {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .coming-soon {
+    font-size: 20px;
+  }
+
+  .content-description p {
+    font-size: 16px;
+  }
 }

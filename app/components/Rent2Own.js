@@ -34,12 +34,12 @@ const Rent2Own = async () => {
     return (
       <div className="rent2own" id="rent2own">
         <div className="content">
-          <h1 style={{ color: "black" }}>Rent2Own (Coming Soon)</h1>
+          <h1 style={{ color: "black" }}>Rent2Own <span className="coming-soon">(Coming Soon)</span></h1>
           <div className="content-description">
             <p>
-              Rent to own, your own Artificial Intelligence designed 750 sq ft
-              home/apartment, for as little as US$6 per day/per person, zero
-              mortgage, zero credit required (Jamaica only).
+            Rent to own your own Artificial Intelligence designed 750 sq ft home/apartment, 
+            for as little as US$6 per day/per person, zero mortgage, zero credit required (Jamaica only),
+            adjusted for inflation per year.
             </p>
           </div>
 

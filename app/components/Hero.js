@@ -15,12 +15,24 @@ const Hero = () => {
                     modern architecture residential properties. Property 888 allows for the tokenization of real estate, 
                     with NFT property loans at 0% interest, with liquidity providers obtaining 12% rewards in US$C, or mUS$C tokens.
                 </p>
-
-                <Link href="/add-liquidity">
-                    <button className='hero-button'>
-                        Add Liquidity
-                    </button>
-                </Link>
+                <div className="button-groups">
+                    <Link href="/add-liquidity">
+                        <button className='hero-button'>
+                            Add Liquidity
+                        </button>
+                    </Link>
+                    <Link href="https://ramp.alchemypay.org/#/index" target='_blank'>
+                        <button className='buyCrypto-button'>
+                            Buy Crypto
+                        </button>
+                    </Link>
+                    <Link href="/">
+                        <button className='crypto-card-button'>
+                            Crypto Card
+                        </button>
+                    </Link>
+                </div>
+                    
 
             </div>
             <div className="right-content">

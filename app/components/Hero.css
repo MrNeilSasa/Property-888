@@ -39,23 +39,74 @@ img {
   height: 100%;
 }
 
+.button-groups{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+
 .hero-button {
-  padding: 17px 28px;
+  padding: 17px 25px;
   font-size: 1.2rem;
   font-weight: 570;
   color: black;
-  height: 62px;
+  min-height: 62px;
   text-transform: uppercase;
   background-color: rgb(2, 136, 2);
   border: 1px solid var(--primary-color);
   border-radius: 4px;
+  width: 190px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .hero-button:hover {
   background: rgb(2, 169, 2);
   border: 1px solid var(--primary-dark);
 }
+
+.buyCrypto-button {
+  padding: 17px 28px;
+  font-size: 1.2rem;
+  font-weight: 570;
+  color: rgb(2, 136, 2);
+  min-height: 62px;
+  width: 190px;
+  text-transform: uppercase;
+  background-color: black;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.buyCrypto-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid var(--primary-dark);
+}
+
+.crypto-card-button {
+  padding: 17px 28px;
+  font-size: 1.2rem;
+  font-weight: 570;
+  color: black;
+  min-height: 62px;
+  width: 190px;
+  text-transform: uppercase;
+  background-color: rgb(239, 204, 4);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.crypto-card-button:hover {
+  background: rgba(239, 204, 4, 0.934);
+  border: 1px solid var(--primary-dark);
+}
+
+
 @media (max-width: 1400px) {
   .left-content p.big-words {
     font-size: 18px;
@@ -100,4 +151,67 @@ img {
   .left-content p.big-words {
     font-size: 0.8em;
   }
+}
+
+@media (max-width: 650px){
+  .hero-button {
+    padding: 17px 25px;
+    font-size: 0.8rem;
+    font-weight: 570;
+    color: black;
+    min-height: 62px;
+    text-transform: uppercase;
+    background-color: rgb(2, 136, 2);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    width: 100px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .hero-button:hover {
+    background: rgb(2, 169, 2);
+    border: 1px solid var(--primary-dark);
+  }
+  
+  .buyCrypto-button {
+    padding: 17px 28px;
+    font-size: 0.8rem;
+    font-weight: 570;
+    color: rgb(2, 136, 2);
+    min-height: 45px;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: black;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .buyCrypto-button:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--primary-dark);
+  }
+  
+  .crypto-card-button {
+    padding: 17px 28px;
+    font-size: 0.8rem;
+    font-weight: 570;
+    color: black;
+    min-height: 62px;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: rgb(239, 204, 4);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .crypto-card-button:hover {
+    background: rgba(239, 204, 4, 0.934);
+    border: 1px solid var(--primary-dark);
+  }
+  
 }

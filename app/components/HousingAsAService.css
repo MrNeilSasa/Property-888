@@ -26,7 +26,7 @@ p {
 }
 
 .haas:before {
-  content: "";
+  content: '';
   background: rgb(241, 234, 234);
   height: 100%;
   width: 100%;
@@ -46,5 +46,21 @@ p {
   padding: 1rem;
 }
 
-@media screen and (max-width: 940px) {
+.moblie-screens {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .normal-screens {
+    display: none;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p.moblie-screens {
+    display: block;
+    font-size: 16px;
+  }
 }
