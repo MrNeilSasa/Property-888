@@ -8,7 +8,7 @@ h1 {
   min-height: 75vh;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 
   width: 100%;
 }
@@ -16,12 +16,12 @@ h1 {
 .team-section {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
 }
 
 .advisor-section {
   display: flex;
-  width: 30%;
+  width: 100%;
   text-align: center;
   flex-direction: column;
 }
@@ -30,7 +30,7 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   align-self: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 65%;
   text-align: center;
   min-height: 500px;

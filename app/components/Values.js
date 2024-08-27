@@ -1,5 +1,5 @@
-import React from "react";
-import "./Values.css";
+import React from 'react'
+import './Values.css'
 
 const Values = () => {
   return (
@@ -10,8 +10,8 @@ const Values = () => {
           <h3> 49,437,525 US$C </h3>
         </div>
         <div className="value">
-          <h2>  Hotel Liquidity/Loan Demand </h2>
-          <h3> 28,250,000 USDT </h3>
+          <h2> Hotel Liquidity/Loan Demand </h2>
+          <h3> 30,074,000 USDT </h3>
         </div>
         <div className="value">
           <h2> NFT Value Locked </h2>
@@ -19,7 +19,7 @@ const Values = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Values;
+export default Values

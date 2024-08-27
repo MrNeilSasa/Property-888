@@ -33,13 +33,12 @@ const HousingAsAService = async () => {
           <h1 style={{ color: 'black' }}>Housing as a Service (HaaS)</h1>
           <div className="content-description">
             <p className="normal-screens">
-              HaaS stands for “Home ownership as a Service”, where three industries are combined as
-              follows: <br />
-              Home ownership as a Service (HaaS) + Solar Power as a Service (SPaaS) + Electric
-              Vehicle as a Service (EVaaS), are combined to make affordable homes, along with mass
-              adoption of electric vehicles (EVs), while allowing the consumer the ability enjoy
-              monthly savings when compared to renting, which perfect for a economic nuclear family,
-              young professionals.
+              HaaS stands for “Home ownership as a Service” where three industries are combined as
+              follows: Home ownership as a Service (HaaS) + Solar Power as a Service (SPaaS) +
+              Electric Vehicle as a Service (EVaaS), are combined to make affordable homes, along
+              with mass adoption of electric vehicles (EVs), while allowing the consumer the ability
+              to enjoy monthly savings when compared to renting, which is perfect for an economic
+              nuclear family, young professionals, & taxi operators.
             </p>
             <p className="moblie-screens">
               Home ownership as a Service (HaaS) + Solar Power as a Service (SPaaS) + Electric
@@ -61,10 +60,13 @@ const HousingAsAService = async () => {
             {availableListings.map((listing) => {
               let formattedPrice
               console.log('Listing price for Hass:', listing.price)
-              if (listing.price === '800.00') {
-                formattedPrice = `US$108,000 / US$800 / JM$C 800 per month (Free: PV Solar + New Compact EV Car or New Mini SUV EV)`
-              } else if (listing.price === '1066.00') {
-                formattedPrice = `US$142,000,000 / US$1,066 / JM$C 1,066 per month (Free: PV Solar + New EV SUV)`
+              if (listing.price === '816.00') {
+                formattedPrice = `US$108,000/US$816 per month /816 JM$C per month (950 sqft + PV Solar + New Compact EV or New Mini SUV EV), 
+                based on 10% deposit, 9% mortgage rate, 25 years.
+`
+              } else if (listing.price === '1073.00') {
+                formattedPrice = `US$142,000/US$1,073 per month /1,073 JM$C per month (950 sqft + PV Solar + New Full Size SUV EV), 
+                based on 10% deposit, 9% mortgage rate, 25 years`
               }
 
               return (

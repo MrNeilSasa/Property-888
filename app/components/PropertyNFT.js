@@ -1,53 +1,50 @@
-import React from "react";
-import { auth } from "@/auth";
-import Link from "next/link";
-import ListingCard from "./ListingCard";
-import ListingCardSoldOut from "./ListingCardSoldOut";
-import axios from "axios";
-import "./PropertyNFT.css";
+import React from 'react'
+import { auth } from '@/auth'
+import Link from 'next/link'
+import ListingCard from './ListingCard'
+import ListingCardSoldOut from './ListingCardSoldOut'
+import axios from 'axios'
+import './PropertyNFT.css'
 
 const PropertyNFT = async () => {
-  const session = await auth();
+  const session = await auth()
 
   try {
-    const res = await axios.get(
-      "https://property-888.vercel.app/api/properties",
-      {
-        //const res = await axios.get("http://localhost:3000/api/properties", {
-        params: { section: "propertynft" },
-      }
-    );
+    const res = await axios.get('https://property-888.vercel.app/api/properties', {
+      //const res = await axios.get("http://localhost:3000/api/properties", {
+      params: { section: 'propertynft' },
+    })
 
-    const availableListings = res.data.availableProperties;
-    const soldListings = res.data.soldProperties;
+    const availableListings = res.data.availableProperties
+    const soldListings = res.data.soldProperties
 
     const formatPrice = (price) => {
       // Function to format the price with commas (optional)
-      return new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD", // Adjust the currency code if needed
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD', // Adjust the currency code if needed
       })
         .format(price)
-        .replace(/^\$/, "");
-    };
+        .replace(/^\$/, '')
+    }
 
     return (
       <div className="propertynft" id="propertynft">
         <div className="content">
-          <h1 style={{ color: "black" }}>
+          <h1 style={{ color: 'black' }}>
             Property NFT <span className="coming-soon">(Coming Soon)</span>
           </h1>
           <div className="content-description">
             <p>
-              Convert your property value & title into that of an NFT, with all
-              legal paperwork, on, and off chain. Vault NFT, use as collateral,
-              then take out TrueSPAC Utility tokens of Choice at 0% interest.
+              Convert your property value & title into that of an NFT, with all legal paperwork, on,
+              and off chain. Vault NFT, use as collateral, then take out TrueSPAC Utility tokens of
+              Choice at 0% interest.
             </p>
           </div>
 
-          {session?.user?.role === "admin" && (
+          {session?.user?.role === 'admin' && (
             <Link href="/submit-property/propertynft">
-              <button className="submit-button" style={{ width: "150px" }}>
+              <button className="submit-button" style={{ width: '150px' }}>
                 Submit Property
               </button>
             </Link>
@@ -63,9 +60,7 @@ const PropertyNFT = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$ ${formatPrice(
-                    listing.price
-                  )} / JM$C ${formatPrice(listing.price)}`}
+                  price={`US$${formatPrice(listing.price)} / JM$C${formatPrice(listing.price)}`}
                 />
               </div>
             ))}
@@ -79,19 +74,17 @@ const PropertyNFT = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$ ${formatPrice(
-                    listing.price
-                  )} / JM$C ${formatPrice(listing.price)}`}
+                  price={`US$ ${formatPrice(listing.price)} / JM$C ${formatPrice(listing.price)}`}
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
-    );
+    )
   } catch (error) {
-    console.error("Error fetching listings: ", error);
+    console.error('Error fetching listings: ', error)
   }
-};
+}
 
-export default PropertyNFT;
+export default PropertyNFT

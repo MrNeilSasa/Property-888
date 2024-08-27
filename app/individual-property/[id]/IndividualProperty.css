@@ -12,6 +12,26 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
+.hero-button {
+  padding: 17px 25px;
+  font-size: 1.2rem;
+  font-weight: 570;
+  color: black;
+  min-height: 62px;
+  text-transform: uppercase;
+  background-color: rgb(2, 136, 2);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  width: 190px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.hero-button:hover {
+  background: rgb(2, 169, 2);
+  border: 1px solid var(--primary-dark);
+}
+
 .contact-card {
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +54,7 @@
   margin: 50px;
 }
 
-.telegramLink{
+.telegramLink {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -42,11 +62,10 @@
   text-decoration: none;
 }
 
-.link-text{
+.link-text {
   align-self: center;
   color: black;
   font-size: 20px;
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -61,7 +80,6 @@
   .mycard h1 {
     font-size: 17px;
   }
-
 
   .mycard p {
     font-size: 15px;
