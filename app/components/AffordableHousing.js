@@ -40,7 +40,7 @@ const AffordableHousing = async () => {
             <p>
               Artificial Intelligence designed 750 sq ft & 950 sq ft affordable homes,
               <br />
-              30% to 50% cheaper.
+              30% to 50% lower cost.
             </p>
           </div>
 

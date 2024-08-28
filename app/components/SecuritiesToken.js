@@ -34,7 +34,7 @@ const SecuritiesToken = async () => {
 
     const convertPrice = (usdPrice) => {
       const iSPACPrice = usdPrice / 100
-      return `US$C${formatPrice(usdPrice)} / iSPAC${formatPrice(iSPACPrice)}`
+      return `${formatPrice(usdPrice)} US$C / ${formatPrice(iSPACPrice)} iSPAC`
     }
 
     return (
@@ -60,20 +60,6 @@ const SecuritiesToken = async () => {
             {availableListings.map((listing) => (
               <div key={listing.id} className="listing-card-style">
                 <ListingCard
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={convertPrice(listing.price)}
-                />
-              </div>
-            ))}
-
-            {soldListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCardSoldOut
                   id={listing.id}
                   mainimage={listing.mainimage}
                   title={listing.title}

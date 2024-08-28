@@ -101,7 +101,6 @@ const IndividualProperty = async ({ params }) => {
               <span className="link-text">Property 888 Telegram Group</span>
             </Link>
 
-            <p>Email: info@property888.xyz</p>
             <p>Phone Number: 1 (876) 207-5897</p>
           </div>
         </div>

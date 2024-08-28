@@ -64,7 +64,7 @@ const PropertyNFT = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$${formatPrice(listing.price)} / JM$C${formatPrice(listing.price)}`}
+                  price={`US$${formatPrice(listing.price)} / ${formatPrice(listing.price)} JM$C`}
                 />
               </div>
             ))}

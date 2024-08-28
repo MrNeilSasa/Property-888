@@ -36,7 +36,7 @@ const NewDevelopment = async () => {
     return (
       <div className="new" id="new">
         <div className="content">
-          <h1 style={{ color: 'black' }}>New Development/Loans</h1>
+          <h1 style={{ color: 'black' }}>New Development/Loan Liquidity.</h1>
           <div className="content-description">
             <p>
               Submit your property to Property 888 for maximum economic development, maximize your
@@ -71,21 +71,7 @@ const NewDevelopment = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$${formatPrice(listing.price)} / JM$C${formatPrice(listing.price)}`}
-                />
-              </div>
-            ))}
-
-            {soldListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCardSoldOut
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={`US$ ${formatPrice(listing.price)} / JM$C ${formatPrice(listing.price)}`}
+                  price={`US$${formatPrice(listing.price)} / ${formatPrice(listing.price)} JM$C`}
                 />
               </div>
             ))}

@@ -64,25 +64,10 @@ const Rent2Own = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$C${formatPrice(listing.price)} per month / JM$C${formatPrice(
+                  price={`${formatPrice(listing.price)} US$C per month / ${formatPrice(
                     listing.price
-                  )} per month`}
-                />
-              </div>
-            ))}
-
-            {soldListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCardSoldOut
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={`US$ ${formatPrice(listing.price)} per month / JM$C ${formatPrice(
-                    listing.price
-                  )} per month`}
+                  )} JM$C
+                    per month`}
                 />
               </div>
             ))}
