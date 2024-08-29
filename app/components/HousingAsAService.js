@@ -43,8 +43,7 @@ const HousingAsAService = async () => {
             <p className="moblie-screens">
               Home ownership as a Service (HaaS) + Solar Power as a Service (SPaaS) + Electric
               Vehicle as a Service (EVaaS) provides superior monthly savings, perfect for the
-              nuclear family, young professionals, and taxi operators. X-Factor: Includes bitcoin
-              mining, with partial proceeds to lower home ownership.
+              nuclear family, young professionals, and taxi operators.
             </p>
           </div>
 

@@ -18,19 +18,23 @@ const SecuritiesToken = async () => {
     const availableListings = res.data.availableProperties
     const soldListings = res.data.soldProperties
 
-    const formatPrice = (price) => {
-      // Function to format the price with commas (optional)
-      return new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD', // Adjust the currency code if needed
+    function formatPrice(value) {
+      // Convert the value to a number in case it's a string
+      const number = parseFloat(value)
+
+      // Format the number with US locale and currency, but without the currency symbol
+      const formatted = number.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
       })
-        .format(price)
-        .replace(/^\$/, '')
+
+      // Remove the decimal part if it's '.00'
+      return formatted.endsWith('.00') ? formatted.slice(0, -3) : formatted
     }
 
     const convertPrice = (usdPrice) => {
       const iSPACPrice = usdPrice / 100
-      return `US$C${formatPrice(usdPrice)} / iSPAC${formatPrice(iSPACPrice)}`
+      return `${formatPrice(usdPrice)} US$C / ${formatPrice(iSPACPrice)} iSPAC`
     }
 
     return (
@@ -56,20 +60,6 @@ const SecuritiesToken = async () => {
             {availableListings.map((listing) => (
               <div key={listing.id} className="listing-card-style">
                 <ListingCard
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={convertPrice(listing.price)}
-                />
-              </div>
-            ))}
-
-            {soldListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCardSoldOut
                   id={listing.id}
                   mainimage={listing.mainimage}
                   title={listing.title}

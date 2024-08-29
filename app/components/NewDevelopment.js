@@ -19,20 +19,24 @@ const NewDevelopment = async () => {
     const availableListings = res.data.availableProperties
     const soldListings = res.data.soldProperties
 
-    const formatPrice = (price) => {
-      // Function to format the price with commas (optional)
-      return new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD', // Adjust the currency code if needed
+    function formatPrice(value) {
+      // Convert the value to a number in case it's a string
+      const number = parseFloat(value)
+
+      // Format the number with US locale and currency, but without the currency symbol
+      const formatted = number.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
       })
-        .format(price)
-        .replace(/^\$/, '')
+
+      // Remove the decimal part if it's '.00'
+      return formatted.endsWith('.00') ? formatted.slice(0, -3) : formatted
     }
 
     return (
       <div className="new" id="new">
         <div className="content">
-          <h1 style={{ color: 'black' }}>New Development/Loans</h1>
+          <h1 style={{ color: 'black' }}>New Development/Loan Liquidity.</h1>
           <div className="content-description">
             <p>
               Submit your property to Property 888 for maximum economic development, maximize your
@@ -67,21 +71,7 @@ const NewDevelopment = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$${formatPrice(listing.price)} / JM$C${formatPrice(listing.price)}`}
-                />
-              </div>
-            ))}
-
-            {soldListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCardSoldOut
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={`US$ ${formatPrice(listing.price)} / JM$C ${formatPrice(listing.price)}`}
+                  price={`US$${formatPrice(listing.price)} / ${formatPrice(listing.price)} JM$C`}
                 />
               </div>
             ))}

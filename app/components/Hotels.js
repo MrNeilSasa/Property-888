@@ -28,15 +28,15 @@ const Hotels = async () => {
     return (
       <div className="hotel" id="hotel">
         <div className="content">
-          <h1 style={{ color: 'black' }}>Hotels/Loans</h1>
+          <h1 style={{ color: 'black' }}>Hotel Loan Liquidity</h1>
           <div className="content-description">
-            <div className="liquidity">
+            {/* <div className="liquidity">
               <Link href="/add-liquidity">
                 <button className="hotel-liquidity">
                   Add Liquidity, for Property 888 Hotel Liquidity Loans.
                 </button>
               </Link>
-            </div>
+            </div> */}
             <p>
               Property 888 buys selected hotels, partners with TravelnCrypto for bookings, with
               wholesale discount bookings in mUS$C, with subletting of initial bookings, with max

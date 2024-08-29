@@ -56,21 +56,7 @@ const Buy = async () => {
                   bedrooms={listing.bedrooms}
                   bathrooms={listing.bathrooms}
                   sqft={listing.sqft}
-                  price={`US$${formatPrice(listing.price)} / JM$C${formatPrice(listing.price)}`}
-                />
-              </div>
-            ))}
-
-            {soldListings.map((listing) => (
-              <div key={listing.id} className="listing-card-style">
-                <ListingCardSoldOut
-                  id={listing.id}
-                  mainimage={listing.mainimage}
-                  title={listing.title}
-                  bedrooms={listing.bedrooms}
-                  bathrooms={listing.bathrooms}
-                  sqft={listing.sqft}
-                  price={`US$ ${formatPrice(listing.price)} / JM$C ${formatPrice(listing.price)}`}
+                  price={`US$${formatPrice(listing.price)} / ${formatPrice(listing.price)} JM$C`}
                 />
               </div>
             ))}
