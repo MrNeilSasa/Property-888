@@ -58,15 +58,15 @@ const IndividualProperty = async ({ params }) => {
       }
     } else if (property.section === 'securities') {
       const usdPrice = formatPrice(property.price)
-      const iSPACPrice = formatPrice(property.price) / 10 // 1 iSPAC is worth 10 US$
-      price = `US$${usdPrice} / iSPAC${iSPACPrice}`
+      const iSPACPrice = formatPrice(property.price / 10) // 1 iSPAC is worth 10 US$
+      price = `US$${usdPrice} / ${iSPACPrice} iSPAC`
     } else if (property.section === 'gold') {
       const usdPrice = formatPrice(property.price)
       // Conversion rates
       const tGLDConversionRate = 350000 / 8.333 // 1 US$ to tGLD
       const mUSDCConversionRate = 350000 / 350 // 1 US$ to mUS$C
-      const tGLDPrice = usdPrice / tGLDConversionRate
-      const mUSDCPrice = usdPrice / mUSDCConversionRate
+      const tGLDPrice = formatPrice(property.price / tGLDConversionRate)
+      const mUSDCPrice = formatPrice(property.price / mUSDCConversionRate)
       price = `US$${usdPrice} / tGLD ${tGLDPrice}m / mUS$C ${mUSDCPrice}b`
     } else {
       price = `US$${formatPrice(property.price)} / JM$C${formatPrice(property.price)}`
