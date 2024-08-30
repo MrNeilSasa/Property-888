@@ -60,11 +60,11 @@ const HousingAsAService = async () => {
               let formattedPrice
               console.log('Listing price for Hass:', listing.price)
               if (listing.price === '816.00') {
-                formattedPrice = `US$108,000/US$816 per month /816 JM$C per month (950 sqft + PV Solar + New Compact EV or New Mini SUV EV), 
+                formattedPrice = `US$108,000 / US$816 per month / 816 JM$C per month (950 sqft + PV Solar + New Compact EV or New Mini SUV EV), 
                 based on 10% deposit, 9% mortgage rate, 25 years.
 `
               } else if (listing.price === '1073.00') {
-                formattedPrice = `US$142,000/US$1,073 per month /1,073 JM$C per month (950 sqft + PV Solar + New Full Size SUV EV), 
+                formattedPrice = `US$142,000 / US$1,073 per month / 1,073 JM$C per month (950 sqft + PV Solar + New Full Size SUV EV), 
                 based on 10% deposit, 9% mortgage rate, 25 years`
               }
 

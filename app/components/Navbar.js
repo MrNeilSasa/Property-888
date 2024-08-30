@@ -240,8 +240,7 @@ const Navbar = () => {
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="https://www.jnbank.com/calculators/mortgage-calculator/"
-                          target="_blank"
+                          href="/misc"
                           onClick={closeMenu}
                           className={classNames(
                             active
