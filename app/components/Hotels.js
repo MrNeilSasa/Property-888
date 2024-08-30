@@ -66,7 +66,7 @@ const Hotels = async () => {
                   hotelid={hotel.hotelid}
                   image={hotel.filename}
                   title={hotel.title}
-                  price={`USDT ${formatPrice(hotel.price)}`}
+                  price={`${formatPrice(hotel.price)} USDT`}
                   url={hotel.url}
                 />
               </div>

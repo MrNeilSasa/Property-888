@@ -43,7 +43,7 @@ const IndividualProperty = async ({ params }) => {
 
     let price
     if (property.section === 'rent2own') {
-      price = `US$${formatPrice(property.price)} per month / JM$C${formatPrice(
+      price = `US$C ${formatPrice(property.price)} per month / JM$C ${formatPrice(
         property.price
       )} per month`
     } else if (property.section === 'haas') {
@@ -67,7 +67,7 @@ const IndividualProperty = async ({ params }) => {
       const mUSDCConversionRate = 350000 / 350 // 1 US$ to mUS$C
       const tGLDPrice = formatPrice(property.price / tGLDConversionRate)
       const mUSDCPrice = formatPrice(property.price / mUSDCConversionRate)
-      price = `US$${usdPrice} / tGLD ${tGLDPrice}m / mUS$C ${mUSDCPrice}b`
+      price = `US$${usdPrice} / ${tGLDPrice}m tGLD / ${mUSDCPrice}b  mUS$C`
     } else {
       price = `US$${formatPrice(property.price)} / JM$C${formatPrice(property.price)}`
     }
