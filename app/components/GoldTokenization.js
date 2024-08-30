@@ -29,7 +29,13 @@ const GoldTokenization = async () => {
       })
 
       // Remove the decimal part if it's '.00'
-      return formatted.endsWith('.00') ? formatted.slice(0, -3) : formatted
+      if (formatted.endsWith('.00')) {
+        return formatted.slice(0, -3)
+      } else if (formatted.endsWith('.00')) {
+        return formatted.slice(0, -4)
+      } else {
+        return formatted
+      }
     }
 
     const convertPrice = (usdPrice) => {
@@ -40,7 +46,7 @@ const GoldTokenization = async () => {
       const tSPACPrice = usdPrice / tSPACConversionRate
       return `US$${formatPrice(usdPrice)} /  ${formatPrice(
         tGLDPrice.toFixed(2)
-      )}m tGLD /  ${tSPACPrice.toFixed(0)}b TSPAC`
+      )}m tGLD /  ${tSPACPrice.toFixed(3)}b TSPAC`
     }
 
     return (

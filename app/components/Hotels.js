@@ -15,14 +15,18 @@ const Hotels = async () => {
 
     const hotels = res.data.hotels
 
-    const formatPrice = (price) => {
-      // Function to format the price with commas (optional)
-      return new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD', // Adjust the currency code if needed
+    function formatPrice(value) {
+      // Convert the value to a number in case it's a string
+      const number = parseFloat(value)
+
+      // Format the number with US locale and currency, but without the currency symbol
+      const formatted = number.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
       })
-        .format(price)
-        .replace(/^\$/, '')
+
+      // Remove the decimal part if it's '.00'
+      return formatted.endsWith('.00') ? formatted.slice(0, -3) : formatted
     }
 
     return (
@@ -62,7 +66,7 @@ const Hotels = async () => {
                   hotelid={hotel.hotelid}
                   image={hotel.filename}
                   title={hotel.title}
-                  price={`US$/USDT ${formatPrice(hotel.price)}`}
+                  price={`USDT ${formatPrice(hotel.price)}`}
                   url={hotel.url}
                 />
               </div>
