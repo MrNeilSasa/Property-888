@@ -21,7 +21,7 @@ const Hero = () => {
         </p>
         <div className="button-groups">
           <Link href="/add-liquidity">
-            <button className="hero-button">Add Liquidity</button>
+            <button className="add-liquidity-button">Add Liquidity</button>
           </Link>
           <Link href="https://ramp.alchemypay.org/#/index" target="_blank">
             <button className="buyCrypto-button">Buy Crypto</button>

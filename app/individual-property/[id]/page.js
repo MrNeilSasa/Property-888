@@ -53,7 +53,7 @@ const IndividualProperty = async ({ params }) => {
                   based on 10% deposit, 9% mortgage rate, 25 years.`
       } else if (property.price === '1073.00') {
         price = `US$142,000/US$1,073 per month /1,073 JM$C \n
-                  per month (950 sqft + PV Solar + New Full Size SUV EV), \n
+                  per month (1200 sqft + PV Solar + New Full Size SUV EV), \n
                   based on 10% deposit, 9% mortgage rate, 25 years.`
       }
     } else if (property.section === 'securities') {
