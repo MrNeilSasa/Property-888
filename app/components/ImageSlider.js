@@ -18,7 +18,7 @@ const ImageSlider = ({ id }) => {
     const fetchImages = async () => {
       try {
         console.log('Getting images for: ', id)
-        const response = await axios.get(`https://property-888.vercel.app/api/imageslider/${id}`)
+        const response = await axios.get(`https://www.property888.xyz/api/imageslider/${id}`)
         //const response = await axios.get(`http://localhost:3000/api/imageslider/${id}`)
         setImages(response.data.slideshow)
         console.log('Images for slider: ', response.data.slideshow)

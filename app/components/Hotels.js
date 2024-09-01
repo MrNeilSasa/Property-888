@@ -10,7 +10,7 @@ const Hotels = async () => {
   const session = await auth()
 
   try {
-    const res = await axios.get('https://property-888.vercel.app/api/hotels')
+    const res = await axios.get('https://www.property888.xyz/api/hotels')
     //const res = await axios.get('http://localhost:3000/api/hotels')
 
     const hotels = res.data.hotels
