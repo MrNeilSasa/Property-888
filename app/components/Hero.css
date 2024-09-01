@@ -157,7 +157,7 @@ img {
     font-size: 0.8rem;
     font-weight: 570;
     color: black;
-    height: 62px;
+    min-height: 62px;
     text-transform: uppercase;
     background-color: rgb(2, 136, 2);
     border: 1px solid var(--primary-color);
