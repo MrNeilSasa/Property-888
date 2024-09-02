@@ -21,7 +21,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThirdwebProvider>
         <SessionProvider>
-          <meta name="" content="LYVski1Yv1RJgbzg5Ggcqa_qYGNmZxpoOXKsK6MhIJE" />
+          <meta
+            name="google-site-verification"
+            content="LYVski1Yv1RJgbzg5Ggcqa_qYGNmZxpoOXKsK6MhIJE"
+          />
           <body>
             <Navbar />
             {children}
