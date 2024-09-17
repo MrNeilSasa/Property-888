@@ -15,7 +15,7 @@ const page = () => {
           alt="House Calulator with link to JN Mortgage Calculator"
         />
       </Link>
-      <p className="fair-use">(Fair Use: Click image to view calculator)</p>
+      {/* <p className="fair-use">(Fair Use: Click image to view calculator)</p> */}
     </div>
   )
 }

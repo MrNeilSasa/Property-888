@@ -307,11 +307,11 @@ const Navbar = () => {
             </Menu>
           </li>
 
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link href="/strategic-partners" onClick={handleClick}>
               Strategic Partners
             </Link>
-          </li>
+          </li> */}
 
           <li className="nav-item">
             <Link href="/q&a" onClick={handleClick}>
