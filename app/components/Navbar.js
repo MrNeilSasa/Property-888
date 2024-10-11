@@ -320,6 +320,12 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
+            <Link href="/about-us" onClick={handleClick}>
+              About Us
+            </Link>
+          </li>
+
+          <li className="nav-item">
             <Link href="/merch" onClick={handleClick}>
               Merch
             </Link>
