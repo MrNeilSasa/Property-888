@@ -260,6 +260,12 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
+            <Link href="https://builderx.us/" onClick={handleClick} target="_blank" rel="noopener noreferrer">
+              BuilderX
+            </Link>
+          </li>
+
+          <li className="nav-item">
             <Menu as="div" className="relative inline-block text-left">
               <div>
                 <Menu.Button

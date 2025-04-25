@@ -6,7 +6,7 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer__copyright">
-                <span>&copy; 2022-2024 Property 888. All rights reserved.</span>
+                <span>&copy; 2025 Property 888. All rights reserved.</span>
             </div>
             <div className="trueSPAC">
                 <p>Powered by <br/> TrueSPAC Web 3 Crypto</p>            
@@ -16,7 +16,7 @@ function Footer() {
                 <span> &middot; &nbsp; </span>
                 <Link href="/privacy-policy">Privacy Policy</Link>
                 <span>&middot; &nbsp; </span>
-                <Link href="/legal-disclaimer">Legal Disclaimer</Link>
+                <Link href="/legal-disclaimer">Disclaimer</Link>
             </div>
         </footer>
     );
