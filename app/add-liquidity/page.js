@@ -4,7 +4,8 @@ import "./AddLiquidity.css";
 const AddLiquidity = () => {
   return (
     <div className="container">
-      <div className="left">
+      <h1>TEMPORARILY UNAVAILABLE</h1>
+      {/* <div className="left">
         <p className="centered-text">
           Add/provide liquidity through a single side liquidity pool. <br />
           Swap USDT, DAI, USDC, WETH, WBTC, for US$C, obtain LP tokens, with 12%
@@ -60,7 +61,7 @@ const AddLiquidity = () => {
           Russia, Somalia, Sudan, South Sudan, Syria, Ukraine/Russia, Venezuela,
           Yemen, and Zimbabwe.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
